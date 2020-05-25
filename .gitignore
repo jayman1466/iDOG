@@ -1,0 +1,10 @@
+.env
+hello.py
+config.py
+web_codon_opt.py
+web_create_RBS.py
+web_operon_design.py
+models.py
+migrations/
+static/
+templates/
