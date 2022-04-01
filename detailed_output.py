@@ -99,7 +99,7 @@ def folding_after_rRNA_binding(RBS_seq, orf_nu, rRNA_sequence = "ACCUCCUUA", sav
     current_working_dir = os.getcwd()
     #create the directory if it doesn't specified and doesn't exist
     directory_name = save_url
-    if directory_name is not "":
+    if directory_name != "":
         if not path.exists(directory_name):
             os.makedirs(directory_name, exist_ok=True) #remember to add mode later
         os.chdir(directory_name)
@@ -192,7 +192,7 @@ def GC_plot(RBS_seq, orf_nu, sliding_window = 30, step_size = 15, save_url = "")
 
     #create the directory if specified and doesn't exist
     directory_name = save_url
-    if directory_name is not "":
+    if directory_name != "":
         if not path.exists(directory_name):
             os.makedirs(directory_name, exist_ok=True) #remember to add mode later
     plt.savefig("{}GC_content".format(directory_name))
@@ -255,7 +255,7 @@ def structure_plot(RBS_seq, orf_nu, sliding_window = 40, step_size = 15, save_ur
 
     #create the directory if it doesn't exist
     directory_name = save_url
-    if directory_name is not "":
+    if directory_name != "":
         if not path.exists(directory_name):
             os.makedirs(directory_name, exist_ok=True) #remember to add mode later
     plt.savefig("{}folding_energy".format(directory_name))

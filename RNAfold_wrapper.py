@@ -128,16 +128,16 @@ def parse_dot(dot_seq):
     backwaslast = 0
     
     for (position,term) in enumerate(dot_seq):        
-        if term is ".":
+        if term == ".":
             parsed.append(0)
         
-        if term is "(":
+        if term == "(":
             parsed.append("xx")
             if backwaslast == 1:
                 current = current + 1
                 backwaslast = 0
             
-        if term is ")":
+        if term == ")":
             parsed.append(current)
             #search parsed for forward bracket locations. Output most 3' value
             parsed_thusfar=[i for i,x in enumerate(parsed) if x=="xx"]
